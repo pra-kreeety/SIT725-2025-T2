@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Random Facts Display</title>
+</head>
+<body>
+<h1>Random Facts About Me API Demo</h1>
+<p>Click the button below to get a random facts about me from the server:</p>
+<button id="fetchFactBtn">Get Fact</button>
+<p id="factDisplay"></p>
+<script>
+// Attach an event listener to the button
+document.getElementById('fetchFactBtn').addEventListener('click', function() {
+// Make a GET request to your API endpoint
+fetch('/api/about-me')
+.then(response => response.json())
+.then(data => {
+// Display the fetched fact in the page
+document.getElementById('factDisplay').innerText = data.quote;
+})
+.catch(error => {
+console.error('Error fetching fact:', error);
+document.getElementById('factDisplay').innerText = 'Error fetching fact.';
+});
+});
+</script>
+</body>
+</html>

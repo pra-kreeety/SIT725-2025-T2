@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SIT 725 Prac 5</title>
+<meta name="description" content="basic template for SIT 725 Prac 5">
+<meta name="author" content="SitePoint">
+<meta property="og:title" content="SIT 725 Prac 5">
+<meta property="og:type" content="website">
+<meta property="og:description" content="basic template for SIT 725 Prac 5">
+<!-- Compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<!-- Custom Style Sheet-->
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<nav>
+<div class="nav-wrapper navbar-size">
+<a href="#" class="brand-logo"><img class="user-image-size" src="images/hero.png" /></a>
+<ul id="nav-mobile" class="right hide-on-med-and-down">
+<li><a target="_blank" href="">LinkedIn</a></li>
+</ul>
+</div>
+</nav>
+<main class="main-body">
+<div class="container">
+<div class="row">
+<div class="col s12 center-align">
+<h1 id="heading">Welcome to SIT 725 Week 5</h1>
+<p class="flow-text">This is a demo application that tries to use a few components from materialize and through this practical we try to
+have some fun with Materialize and its components</p>
+</div>
+<div class="col s12 center-align">
+<img class="materialboxed materialboxed-image" src="images/main.png">
+</div>
+<div class="col s12 center-align">
+<a class="waves-effect waves-light btn click-me-button modal-trigger" id="clickMeButton" data-target="modal1"><i class="material-icons left">auto_fix_high</i>Contact Us</a>
+</div>
+</div>
+<div class="row" id="card-section">
+<div class="col s12 m6 l4">
+<div class="card medium hoverable">
+<div class="card-image waves-effect waves-block waves-light">
+<img class="activator" src="images/dog-1.jpg" alt="Labrador">
+<span class="card-title">Labrador</span>
+</div>
+<div class="card-content">
+<div class="card-stats">
+<p><i class="material-icons tiny">pets</i> <strong>Breed:</strong> Labrador Retriever</p>
+<p><i class="material-icons tiny">cake</i> <strong>Age:</strong> 4 years old</p>
+<p><i class="material-icons tiny">monitor_weight</i> <strong>Weight:</strong> 70 lbs</p>
+</div>
+</div>
+<div class="card-action">
+<a href="#" class="btn-small waves-effect waves-light blue lighten-1" onclick="showLabradorDetails()">
+<i class="material-icons left">info</i>Learn More
+</a>
+<a href="#" class="btn-small waves-effect waves-light green lighten-1" onclick="adoptDog('Labrador')">
+<i class="material-icons left">favorite</i>Adopt
+</a>
+</div>
+<div class="card-reveal">
+<span class="card-title grey-text text-darken-4">Labrador
+<i class="material-icons right">close</i>
+</span>
+<p><strong>About Labrador:</strong></p>
+<p class="card-text">Labrador Retrievers are outgoing, active dogs who have more than enough affection to go around for a family looking for a medium-to-large dog. They are famously friendly and make excellent companions.</p>
+<p><strong>Temperament:</strong> Outgoing, Active, Friendly</p>
+<div class="card-action">
+<a href="#" class="btn waves-effect waves-light" onclick="adoptDog('Labrador')">
+<i class="material-icons left">favorite</i>Adopt Labrador
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal Structure -->
+<div id="modal1" class="modal modal-fixed-footer">
+<div class="modal-content">
+<h4><i class="material-icons left">contact_mail</i>Contact Us</h4>
+<p>Interested in adopting? Fill out the form below and we'll get back to you!</p>
+<div class="row">
+<form class="col s12" id="contactForm">
+<div class="row">
+<div class="input-field col s6">
+<i class="material-icons prefix">account_circle</i>
+<input id="first_name" type="text" class="validate" required>
+<label for="first_name">First Name</label>
+<span class="helper-text" data-error="Please enter your first name"></span>
+</div>
+<div class="input-field col s6">
+<i class="material-icons prefix">account_circle</i>
+<input id="last_name" type="text" class="validate" required>
+<label for="last_name">Last Name</label>
+<span class="helper-text" data-error="Please enter your last name"></span>
+</div>
+</div>
+<div class="row">
+<div class="input-field col s12">
+<i class="material-icons prefix">email</i>
+<input id="email" type="email" class="validate" required>
+<label for="email">Email Address</label>
+<span class="helper-text" data-error="Please enter a valid email address"></span>
+</div>
+</div>
+<div class="row">
+<div class="input-field col s12">
+<i class="material-icons prefix">phone</i>
+<input id="phone" type="tel" class="validate">
+<label for="phone">Phone Number (Optional)</label>
+</div>
+</div>
+<div class="row">
+<div class="input-field col s12">
+<i class="material-icons prefix">message</i>
+<textarea id="message" class="materialize-textarea validate" required></textarea>
+<label for="message">Tell us why you'd like to adopt</label>
+<span class="helper-text" data-error="Please tell us about yourself"></span>
+</div>
+</div>
+<a href="#!" class="modal-close waves-effect waves-light btn-flat">Cancel</a>
+<a href="#!" class="waves-effect waves-light btn" id="formSubmit">
+<i class="material-icons left">send</i>Submit Application
+</a>
+</form>
+</div>
+</div>
+
+</div>
+</main>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+crossorigin="anonymous"></script>
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src="js/scripts.js"></script>
+</body>
+</html>
